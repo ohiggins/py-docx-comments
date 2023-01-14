@@ -9,10 +9,10 @@ print(commentdata)
 
 #directory
 data=cm.getdirComments('docx/',pattern) #pattern is optional
-print(data)
+# print(data)
 
 #save to a json file
-cm.jsonoutput(data,"comments.json",pattern)
+cm.jsonoutput(data,"testheader.fred",pattern,True)# add True as well to add the headers to the end of the file
 
 #save to a csv file
 cm.csvoutput(data,"comments.csv",pattern)#pattern is optional
