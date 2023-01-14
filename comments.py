@@ -177,7 +177,16 @@ def getFileList(dir):
     docx_files = [f for f in files if f.endswith('.docx')]
     return docx_files
 
-def jsonoutput(data,filename,option=[]):
+def jsonoutput(data,filename,option=[],headers=False):
+    column_names = ['comment_id', 'CommentText', 'Paragraph','Comment','Author','DateTime','FileName']
+    # if len(option)==0:
+    if option is None:
+        print("")
+    else:
+        for i,e in enumerate(option[2]):
+            column_names.append(option[2][i])
+    if headers==True:
+        data.append(column_names)
     json_data = json.dumps(data, indent=0, separators=(',', ':'), ensure_ascii=True, sort_keys=False, default=str)
     json_data = json_data.replace("\n", "").replace("\r", "")
     with open(filename, 'w', encoding='utf-8') as f:
