@@ -1,6 +1,6 @@
 # py-docx-comments
 
-import comments as cm
+```import comments as cm
 
 #optional pattern
 pattern=['*',['text','text','number'],['CategoryText','InterpretationOfText','AuthenticityMarking']]
@@ -17,4 +17,4 @@ data=cm.getdirComments('docx/',pattern) #pattern is optional
 cm.jsonoutput(data,"testheader.fred",pattern,True)# add True as well to add the headers to the end of the file
 
 #save to a csv file
-cm.csvoutput(data,"comments.csv",pattern)#pattern is optional
+cm.csvoutput(data,"comments.csv",pattern)#pattern is optional```
